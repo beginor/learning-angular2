@@ -1,0 +1,31 @@
+{
+  "name": "learning-angular2",
+  "version": "1.0.0",
+  "description": "learning angular2",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginor/learning-angular2.git"
+  },
+  "keywords": [
+    "angular2",
+    "typescript"
+  ],
+  "author": "beginor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beginor/learning-angular2/issues"
+  },
+  "homepage": "https://github.com/beginor/learning-angular2#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.8",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.5.15"
+  }
+}
