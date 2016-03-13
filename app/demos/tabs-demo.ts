@@ -4,12 +4,11 @@ import { BsPane, BsTabs } from '../directives/bs-tabs';
 @Component({
     selector: 'tabs-demo',
     template: `
-        <h2>Hello, Angular2</h2>
         <bs-tabs>
             <template bs-pane title="Overview" active="true">
                 You have {{details.length}} details.
             </template>
-            <template *ngFor="#dtl of details" bs-pane [title]="dtl.title">
+            <template bs-pane *ngFor="#dtl of details" [title]="dtl.title">
                 {{dtl.text}} <br><br>
                 <button class="btn btn-warning-outline" (click)="removeDetail(dtl)">Remove</button>
             </template>

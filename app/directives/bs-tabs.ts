@@ -32,7 +32,7 @@ export class BsPane {
     selector: 'bs-tabs',
     template: `
         <ul class="nav nav-tabs">
-            <li *ngFor="var pane of panes"
+            <li *ngFor="#pane of panes"
                 class="nav-item"
                 (click)="select(pane)"
                 role="presentation">
@@ -46,7 +46,7 @@ export class BsTabs {
     @ContentChildren(BsPane) panes: QueryList<BsPane>;
 
     select(pane: BsPane) {
-        this.panes.toArray().forEach(p => { p.active = p == pane; });
+        this.panes.toArray().forEach((p: BsPane) => { p.active = p == pane; });
     }
 
 }
