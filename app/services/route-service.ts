@@ -1,4 +1,3 @@
-import { Injectable } from "angular2/core";
 import { RouteDefinition } from 'angular2/router';
 
 import {FormsDemo} from "../demos/forms-demo";
@@ -9,5 +8,4 @@ let routes: RouteDefinition[] = [
     { path: '/forms', name: 'FormsDemo', component: FormsDemo }
 ];
 
-@Injectable()
 export default routes;
