@@ -12,6 +12,9 @@
     "outDir": "dist"
   },
   "exclude": [
-    "node_modules", ".idea"
+    "node_modules",
+    ".idea",
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }
