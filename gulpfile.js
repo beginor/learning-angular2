@@ -4,22 +4,14 @@ var gulp = require('gulp'),
     gls = require('gulp-live-server');
 
 gulp.task('ts:app', function () {
-    var tsResult = gulp.src('app/**/*.ts')
+    'use strict';
+    var proj = tsc.createProject('tsconfig.json');
+    gulp.src('app/**/*.ts')
         .pipe(sourcemaps.init())
-        .pipe(tsc({
-            "target": "es5",
-            "module": "system",
-            "moduleResolution": "node",
-            "sourceMap": true,
-            "inlineSourceMap": false,
-            "emitDecoratorMetadata": true,
-            "experimentalDecorators": true,
-            "removeComments": false,
-            "noImplicitAny": false
-        }));
-    //console.log(tsResult);
-    return tsResult.js.pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dist'));
+        .pipe(tsc(proj))
+        .js
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./app'));
 });
 
 gulp.task('serve', function () {
