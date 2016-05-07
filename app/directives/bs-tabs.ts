@@ -1,4 +1,4 @@
-import {Component, Directive, Input, QueryList, ViewContainerRef, TemplateRef, ContentChildren} from 'angular2/core';
+import {Component, Directive, Input, QueryList, ViewContainerRef, TemplateRef, ContentChildren} from '@angular/core';
 
 @Directive({ selector: '[bs-pane]'})
 export class BsPane {
@@ -8,7 +8,7 @@ export class BsPane {
 
     constructor(
         public viewContainerRef: ViewContainerRef,
-        public templateRef: TemplateRef
+        public templateRef: TemplateRef<any>
     ) { }
 
     @Input() set active(active: boolean) {

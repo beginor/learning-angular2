@@ -1,4 +1,4 @@
-import { RouteDefinition } from 'angular2/router';
+import { RouteDefinition } from '@angular/router-deprecated';
 
 import {FormsDemo} from "../demos/forms-demo";
 import {TabsDemo} from "../demos/tabs-demo";

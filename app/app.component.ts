@@ -1,5 +1,5 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import routes from './services/route-service';
 
@@ -25,7 +25,7 @@ export class AppComponent {
     
     currDemo = routes[0];
     
-    selectDemo(d) {
+    selectDemo(d: any) {
         this.currDemo = d;
     }
 }
