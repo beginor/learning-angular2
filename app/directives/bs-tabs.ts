@@ -32,7 +32,7 @@ export class BsPane {
     selector: 'bs-tabs',
     template: `
         <ul class="nav nav-tabs">
-            <li *ngFor="#pane of panes"
+            <li *ngFor="let pane of panes"
                 class="nav-item"
                 (click)="select(pane)"
                 role="presentation">

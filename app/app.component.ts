@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
 import routes from './services/route-service';
 
@@ -8,9 +8,9 @@ import routes from './services/route-service';
     template: `
         <h2>Hello, Angular2</h2>
         <ul class="nav nav-pills">
-            <li class="nav-item" *ngFor="#d of demos">
+            <li class="nav-item" *ngFor="let d of demos">
                 <a class="nav-link" [class.active]="d == currDemo"
-                   [routerLink]="[d.name]" (click)="selectDemo(d)">{{d.name}}</a>
+                   [routerLink]="[d.path]" (click)="selectDemo(d)">{{d.name}}</a>
             </li>
         </ul>
         <router-outlet></router-outlet>
@@ -18,7 +18,7 @@ import routes from './services/route-service';
     directives: [ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS]
 })
-@RouteConfig(routes)
+@Routes(routes)
 export class AppComponent {
     
     demos = routes;

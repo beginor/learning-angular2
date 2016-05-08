@@ -1,11 +1,17 @@
-import { RouteDefinition } from '@angular/router-deprecated';
+import { Route } from '@angular/router';
 
 import {FormsDemo} from "../demos/forms-demo";
 import {TabsDemo} from "../demos/tabs-demo";
 
-let routes: RouteDefinition[] = [
-    { path: '/tabs', name: 'TabsDemo', component: TabsDemo },
-    { path: '/forms', name: 'FormsDemo', component: FormsDemo }
+export class NamedRoute extends Route {
+
+    name: string;
+
+}
+
+let routes: NamedRoute[] = [
+    { path: '/tabs', name: 'Tabs', component: TabsDemo },
+    { path: '/forms', name: 'Forms', component: FormsDemo }
 ];
 
 export default routes;

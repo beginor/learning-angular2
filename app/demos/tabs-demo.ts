@@ -8,7 +8,7 @@ import { BsPane, BsTabs } from '../directives/bs-tabs';
             <template bs-pane title="Overview" active="true">
                 You have {{details.length}} details.
             </template>
-            <template bs-pane *ngFor="#dtl of details" [title]="dtl.title">
+            <template bs-pane *ngFor="let dtl of details" [title]="dtl.title">
                 {{dtl.text}} <br><br>
                 <button class="btn btn-warning-outline" (click)="removeDetail(dtl)">Remove</button>
             </template>
