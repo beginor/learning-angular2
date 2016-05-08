@@ -1,12 +1,12 @@
 import {Component, OnInit}   from '@angular/core';
 import {Router, ROUTER_DIRECTIVES, Routes} from '@angular/router';
 
-import {FormsDemo} from "./demos/forms-demo";
-import {TabsDemo} from "./demos/tabs-demo";
+import { FormsDemo } from "./demos/forms-demo";
+import { TabsDemo } from "./demos/tabs-demo";
 
 import { HeroListComponent } from './heroes/hero-list.component';
-import { CrisisListComponent } from './crisises/crisis-list.component';
-import {HeroDetailComponent} from "./heroes/hero-detail.component";
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { HeroDetailComponent } from "./heroes/hero-detail.component";
 
 @Component({
     selector: 'my-app',
@@ -31,7 +31,7 @@ import {HeroDetailComponent} from "./heroes/hero-detail.component";
     directives: [ROUTER_DIRECTIVES]
 })
 @Routes([
-    { path: '/crisis-center', component: CrisisListComponent },
+    { path: '/crisis-center', component: CrisisCenterComponent },
     { path: '/heroes', component: HeroListComponent },
     {path: '/hero/:id', component: HeroDetailComponent},
     { path: '/tabs', component: TabsDemo },
