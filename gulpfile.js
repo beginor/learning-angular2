@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     gls = require('gulp-live-server');
 
-gulp.task('ts:app', function () {
+gulp.task('tsc', function () {
     'use strict';
     var proj = tsc.createProject('tsconfig.json');
     gulp.src('app/**/*.ts')
@@ -11,8 +11,10 @@ gulp.task('ts:app', function () {
         .pipe(tsc(proj))
         .js
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('build', ['tsc']);
 
 gulp.task('serve', function () {
     var server = gls.static('./', 3000);
@@ -25,7 +27,7 @@ gulp.task('serve', function () {
 
 gulp.task('dev', function () {
     gulp.watch('app/**/*.ts', function () {
-       gulp.start('ts:app');
+       gulp.start('tsc');
     });
     gulp.start('serve');
 });
