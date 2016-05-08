@@ -1,31 +1,49 @@
-import { Component } from '@angular/core';
-import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
+import {Component, OnInit}   from '@angular/core';
+import {Router, ROUTER_DIRECTIVES, Routes} from '@angular/router';
 
-import routes from './services/route-service';
+import {FormsDemo} from "./demos/forms-demo";
+import {TabsDemo} from "./demos/tabs-demo";
+
+import { HeroListComponent } from './heroes/hero-list.component';
+import { CrisisListComponent } from './crisises/crisis-list.component';
+import {HeroDetailComponent} from "./heroes/hero-detail.component";
 
 @Component({
     selector: 'my-app',
     template: `
         <h2>Hello, Angular2</h2>
         <ul class="nav nav-pills">
-            <li class="nav-item" *ngFor="let d of demos">
-                <a class="nav-link" [class.active]="d == currDemo"
-                   [routerLink]="[d.path]" (click)="selectDemo(d)">{{d.name}}</a>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/crisis-center']">Crisis Center</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/heroes']">Heroes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/tabs']">Tabs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/forms']">Forms</a>
             </li>
         </ul>
         <router-outlet></router-outlet>
     `,
-    directives: [ROUTER_DIRECTIVES],
-    providers: [ROUTER_PROVIDERS]
+    directives: [ROUTER_DIRECTIVES]
 })
-@Routes(routes)
-export class AppComponent {
-    
-    demos = routes;
-    
-    currDemo = routes[0];
-    
-    selectDemo(d: any) {
-        this.currDemo = d;
+@Routes([
+    { path: '/crisis-center', component: CrisisListComponent },
+    { path: '/heroes', component: HeroListComponent },
+    {path: '/hero/:id', component: HeroDetailComponent},
+    { path: '/tabs', component: TabsDemo },
+    { path: '/forms', component: FormsDemo }
+])
+export class AppComponent implements OnInit {
+
+    constructor(private router:Router) {
+    }
+
+    ngOnInit() {
+        //this.demos = routes;
+        this.router.navigate(['/crisis-center']);
     }
 }
