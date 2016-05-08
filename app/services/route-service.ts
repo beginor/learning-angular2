@@ -4,7 +4,7 @@ import {FormsDemo} from "../demos/forms-demo";
 import {TabsDemo} from "../demos/tabs-demo";
 
 import { HeroListComponent } from '../heroes/hero-list.component';
-import { CrisisListComponent } from '../crisises/crisis-list.component';
+import { CrisisListComponent } from '../crisis-center/crisis-list.component';
 
 
 export class NamedRoute extends Route {
