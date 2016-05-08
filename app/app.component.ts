@@ -11,7 +11,7 @@ import {HeroDetailComponent} from "./heroes/hero-detail.component";
 @Component({
     selector: 'my-app',
     template: `
-        <h2>Hello, Angular2</h2>
+        <h2>Angular2 Demo App</h2>
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/crisis-center']">Crisis Center</a>
