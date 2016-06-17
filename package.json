@@ -37,7 +37,22 @@
     "zone.js": "^0.6.12",
     "angular2-in-memory-web-api": "0.0.11",
     "bootstrap": "^4.0.0-alpha.2",
-    "font-awesome": "^4.6.1"
+    "font-awesome": "^4.6.1",
+    "@angular2-material/button": "^2.0.0-alpha.5-2",
+    "@angular2-material/card": "^2.0.0-alpha.5-2",
+    "@angular2-material/checkbox": "^2.0.0-alpha.5-2",
+    "@angular2-material/core": "^2.0.0-alpha.5-2",
+    "@angular2-material/grid-list": "^2.0.0-alpha.5-2",
+    "@angular2-material/icon": "^2.0.0-alpha.5-2",
+    "@angular2-material/input": "^2.0.0-alpha.5-2",
+    "@angular2-material/list": "^2.0.0-alpha.5-2",
+    "@angular2-material/progress-bar": "^2.0.0-alpha.5-2",
+    "@angular2-material/progress-circle": "^2.0.0-alpha.5-2",
+    "@angular2-material/radio": "^2.0.0-alpha.5-2",
+    "@angular2-material/sidenav": "^2.0.0-alpha.5-2",
+    "@angular2-material/slide-toggle": "^2.0.0-alpha.5-2",
+    "@angular2-material/tabs": "^2.0.0-alpha.5-2",
+    "@angular2-material/toolbar": "^2.0.0-alpha.5-2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
