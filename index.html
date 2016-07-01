@@ -9,6 +9,7 @@
     <title>Angular 2 Test</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="dist/main.css"/>
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -17,6 +18,9 @@
     <script src="systemjs.config.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-full navbar-fixed-top navbar-light bg-faded">
+  <a class="navbar-brand" [routerLink]="['']">Angular2 + Bootstrap4 Demos</a>
+</nav>
 
 <app>
     Loading Angular App ...
