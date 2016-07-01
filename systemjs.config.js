@@ -21,6 +21,7 @@
     'common',
     'compiler',
     'core',
+    'forms',
     'http',
     'platform-browser',
     'platform-browser-dynamic',
@@ -30,37 +31,16 @@
   ];
   // Individual files (~300 requests):
   function packIndex(pkgName) {
-    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+    packages['@angular/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
   }
   // Bundled (~40 requests):
   function packUmd(pkgName) {
-    packages['@angular/'+pkgName] = { main: pkgName + '.umd.js', defaultExtension: 'js' };
+    packages['@angular/' + pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
   };
   // Most environments should use UMD; some (Karma) need the individual index files
   var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
-  // angular2-material packages;
-  var mdPackageNames = [
-    'button',
-    'card',
-    'checkbox',
-    'core',
-    'grid-list',
-    'icon',
-    'input',
-    'list',
-    'progress-bar',
-    'progress-circle',
-    'radio',
-    'sidenav',
-    'slide-toggle',
-    'tabs',
-    'toolbar'
-  ];
-  mdPackageNames.forEach(function (pkg) {
-    packages['@angular2-material/' + pkg] = { main: pkg + '.js' };
-  });
   
   var config = {
     map: map,

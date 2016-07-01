@@ -1,8 +1,8 @@
 import { Directive, OnInit, Input, HostBinding, HostListener, Self } from '@angular/core';
-import { ControlValueAccessor, NgModel } from '@angular/common';
+import { ControlValueAccessor, NgModel } from '@angular/forms';
 
 @Directive({
-    selector: '[toggle]'
+    selector: '[data-toggle=button]'
 })
 class ButtonDirective implements OnInit {
 
