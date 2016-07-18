@@ -1,13 +1,16 @@
 <div class="container-fluid">
-  <div class="col-md-3 col-sm-4">
-      <div class="list-group">
-        <a class="list-group-item disabled">Demo List</a>
-        <a class="list-group-item" [routerLink]="['buttons']">Buttons Demo</a>
-      </div>
-  </div>
-  <div class="col-md-9 col-sm-8">
-    <div class="demo-content">
-      <router-outlet></router-outlet>
+    <div class="col-md-3 col-sm-4">
+        <div class="card">
+            <div class="card-header">Demo List</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item" [routerLink]="['accordion']">Accordion</a>
+            </div>
+        </div>
+
     </div>
-  </div>
+    <div class="col-md-9 col-sm-8">
+        <div class="demo-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
