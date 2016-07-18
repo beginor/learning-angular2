@@ -9,13 +9,14 @@
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs',
-    '@angular2-material':         'node_modules/@angular2-material'
+    '@ng-bootstrap':              'node_modules/@ng-bootstrap'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js', format: 'amd' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    '@ng-bootstrap/ng-bootstrap': { main: 'index.js', defaultExtension: 'js' }
   };
   var ngPackageNames = [
     'common',
@@ -41,7 +42,7 @@
   var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
-  
+
   var config = {
     map: map,
     packages: packages
