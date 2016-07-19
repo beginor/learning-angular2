@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">NG-Bootstrap Demos</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item" [routerLink]="['accordion']">Accordion</a>
+                <a class="list-group-item" *ngFor="let demo of demos" [routerLink]="[demo.path]">{{demo.text}}</a>
             </div>
         </div>
     </div>
