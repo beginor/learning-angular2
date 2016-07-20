@@ -24,9 +24,9 @@ gulp.task('tsc', function () {
 });
 
 gulp.task('sass', function () {
-    gulp.src(scss)
-        .pipe(sass())
-        .pipe(gulp.dest(dist))
+    // gulp.src(scss)
+    //     .pipe(sass())
+    //     .pipe(gulp.dest(dist))
 });
 
 gulp.task('copy', function () {
@@ -47,6 +47,6 @@ gulp.task('serve', function () {
 
 gulp.task('dev', ['build', 'serve'], function () {
     gulp.watch(ts, ['tsc']);
-    gulp.watch(scss, ['sass']);
+    // gulp.watch(scss, ['sass']);
     gulp.watch(html, ['copy']);
 });

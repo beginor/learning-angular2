@@ -6,13 +6,7 @@ import { NGB_ALERT_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
     selector: 'alert-demo',
     templateUrl: 'dist/demos/alert.html',
     directives: [ NGB_ALERT_DIRECTIVES ],
-    styles: [`
-        :host .alert-custom {
-            color: #99004d;
-            background-color: #f169b4;
-            border-color: #800040;
-        }
-    `]
+    styleUrls: ['dist/demos/alert.css']
 })
 export class AlertDemo implements OnInit {
     

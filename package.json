@@ -4,7 +4,8 @@
   "description": "learning angular2",
   "main": "index.html",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "concurrently \"compass watch\" \"gulp dev\""
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "font-awesome": "^4.6.3"
   },
   "devDependencies": {
+    "concurrently": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-live-server": "0.0.29",
     "gulp-sass": "^2.3.2",

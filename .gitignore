@@ -40,3 +40,4 @@ app/**/*.js
 app/**/*.js.map
 dist
 typings
+.sass-cache
