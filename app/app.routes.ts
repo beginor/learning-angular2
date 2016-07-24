@@ -8,6 +8,7 @@ import { CarouselDemo } from './demos/carousel';
 import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
 import { PagerDemo } from './demos/pager';
+import { PaginationDemo } from './demos/pagination';
 
 export interface TextRoute extends Route {
     text: string;
@@ -21,7 +22,8 @@ export const routes: TextRoute[] = [
     { path: 'carousel', component: CarouselDemo, text: 'Carousel' },
     { path: 'collapse', component: CollapseDemo, text: 'Collapse' },
     { path: 'dropdown', component: DropdownDemo, text: 'Dropdown' },
-    { path: 'pager', component: PagerDemo, text: 'Pager' }
+    { path: 'pager', component: PagerDemo, text: 'Pager' },
+    { path: 'pagination', component: PaginationDemo, text: 'Pagination' }
 ];
 
 export const APP_ROUTER_PROVIDERS = [
