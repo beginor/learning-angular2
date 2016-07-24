@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        Pager
+        <div class="pull-xs-right">
+            <label>
+                <input type="checkbox" [(ngModel)]="alignLinks" /> Align Links
+            </label>
+        </div>
+    </div>
+    <div class="clad-block">
+        <ngb-pager [noOfPages]="noOfPages" [(page)]="currentPage" [alignLinks]="alignLinks"></ngb-pager>
+    </div>
+    <div class="card-footer">Current Page: {{currentPage + 1}}</div>
+</div>
