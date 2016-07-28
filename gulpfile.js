@@ -2,13 +2,11 @@
 
 let gulp = require('gulp'),
     gls = require('gulp-live-server'),
-    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     tsc = require('gulp-typescript');
 
 let root = './',
     ts = root + 'app/**/*.ts',
-    scss = root + 'app/**/*.scss',
     html = root + 'app/**/*.html',
     dist = root + 'dist',
     port = 3000;
@@ -23,18 +21,12 @@ gulp.task('tsc', function () {
         .pipe(gulp.dest(dist));
 });
 
-gulp.task('sass', function () {
-    // gulp.src(scss)
-    //     .pipe(sass())
-    //     .pipe(gulp.dest(dist))
-});
-
 gulp.task('copy', function () {
     gulp.src(html)
         .pipe(gulp.dest(dist));
 });
 
-gulp.task('build', ['tsc', 'sass', 'copy']);
+gulp.task('build', ['tsc', 'copy']);
 
 gulp.task('serve', function () {
     var server = gls.static(root, port);
@@ -47,6 +39,5 @@ gulp.task('serve', function () {
 
 gulp.task('dev', ['build', 'serve'], function () {
     gulp.watch(ts, ['tsc']);
-    // gulp.watch(scss, ['sass']);
     gulp.watch(html, ['copy']);
 });
