@@ -4,6 +4,8 @@
   "description": "learning angular2",
   "main": "index.html",
   "scripts": {
+    "postinstall": "npm run typings-install",
+    "typings-install": "typings install",
     "test": "test",
     "dev": "concurrently \"compass watch\" \"gulp dev\""
   },
@@ -40,7 +42,7 @@
     "systemjs": "0.19.27",
     "zone.js": "^0.6.12",
 
-    "bootstrap": "^4.0.0-alpha.2",
+    "bootstrap": "^4.0.0-alpha.3",
     "font-awesome": "^4.6.3"
   },
   "devDependencies": {
