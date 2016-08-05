@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header">Popover</div>
+    <div class="card-block">
+        <div class="form-group">
+            <label for="placement">Placement</label>
+           <select name="placement" id="placement" [(ngModel)]="placement">
+               <option *ngFor="let p of placements" [value]="p">{{p}}</option>
+           </select>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg"
+                ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                title="Popover Title" [placement]="placement">
+            Toggle Popover
+        </button>
+    </div>
+</div>

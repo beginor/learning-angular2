@@ -9,6 +9,7 @@ import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
 import { PagerDemo } from './demos/pager';
 import { PaginationDemo } from './demos/pagination';
+import { PopoverDemo } from './demos/popover';
 
 export interface TextRoute extends Route {
     text: string;
@@ -23,7 +24,8 @@ export const routes: TextRoute[] = [
     { path: 'collapse', component: CollapseDemo, text: 'Collapse' },
     { path: 'dropdown', component: DropdownDemo, text: 'Dropdown' },
     { path: 'pager', component: PagerDemo, text: 'Pager' },
-    { path: 'pagination', component: PaginationDemo, text: 'Pagination' }
+    { path: 'pagination', component: PaginationDemo, text: 'Pagination' },
+    { path: 'popover', component: PopoverDemo, text: 'Popover' }
 ];
 
 export const APP_ROUTER_PROVIDERS = [
