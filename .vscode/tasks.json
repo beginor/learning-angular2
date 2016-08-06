@@ -12,16 +12,20 @@
             "args": ["install"]
         },
         {
-            "taskName": "update",
-            "args": ["update"]
-        },
-        {
-            "taskName": "test",
-            "args": ["run", "test"]
-        },
-        {
             "taskName": "dev",
             "args": ["run", "dev"]
+        },
+        {
+            "taskName": "build",
+            "args": ["run", "build"]
+        },
+        {
+            "taskName": "clean",
+            "args": ["run", "clean"]
+        },
+        {
+            "taskName": "start",
+            "args": ["start"]
         }
     ]
 }
