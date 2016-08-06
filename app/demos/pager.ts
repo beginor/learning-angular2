@@ -4,7 +4,7 @@ import { NGB_PAGER_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'pager-demo',
-    templateUrl: 'dist/demos/pager.html',
+    templateUrl: './pager.html',
     directives: [ NGB_PAGER_DIRECTIVES ]
 })
 export class PagerDemo {

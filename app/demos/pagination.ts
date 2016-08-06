@@ -4,7 +4,7 @@ import { NGB_PAGINATION_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'pagination-demo',
-    templateUrl: 'dist/demos/pagination.html',
+    templateUrl: './pagination.html',
     directives: [NGB_PAGINATION_DIRECTIVES]
 })
 export class PaginationDemo {

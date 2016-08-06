@@ -9,8 +9,8 @@ import { routes } from './app.routes';
     //moduleId: module.id,
     selector: 'app',
     providers: [ HTTP_PROVIDERS ],
-    templateUrl: 'dist/app.component.html',
-    styleUrls: ['dist/app.component.css'],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
     precompile: [NGB_PRECOMPILE],
     directives: [
         ROUTER_DIRECTIVES

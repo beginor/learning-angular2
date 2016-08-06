@@ -3,7 +3,7 @@ import { NGB_RADIO_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'buttons-demo',
-    templateUrl: 'dist/demos/buttons.html',
+    templateUrl: './buttons.html',
     directives: [ NGB_RADIO_DIRECTIVES ]
 })
 export class ButtonsDemo implements OnInit {
