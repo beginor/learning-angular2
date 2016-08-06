@@ -38,6 +38,7 @@ node_modules
 # build out put
 app/**/*.js
 app/**/*.js.map
+app/**/*.css
 dist
 typings
 .sass-cache

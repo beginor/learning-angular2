@@ -4,9 +4,9 @@ require 'compass/import-once/activate'
 # Set this to the root of your project when deployed:
 http_path = "/"
 sass_dir = "app"
-css_dir = "dist"
-images_dir = "dist"
-javascripts_dir = "dist"
+css_dir = "app"
+images_dir = "app"
+javascripts_dir = "app"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
