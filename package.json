@@ -6,9 +6,9 @@
   "scripts": {
     "postinstall": "npm run typings-install",
     "typings-install": "typings install",
-    "build": "compass compile && webpack --inline --colors --progress --display-error-details --display-cached",
-    "watch": "concurrently \"compass watch\" \"webpack --inline --colors --progress --display-error-details --display-cached --watch\"",
-    "dev": "concurrently \"compass watch\" \"webpack-dev-server --inline --colors --progress --display-error-details --display-cached --watch\""
+    "build": "compass compile && webpack --progress --display-error-details --display-cached",
+    "watch": "concurrently \"compass watch\" \"webpack --progress --display-error-details --display-cached --watch\"",
+    "dev": "concurrently \"compass watch\" \"webpack-dev-server --inline --colors --progress --hot\""
   },
   "repository": {
     "type": "git",
