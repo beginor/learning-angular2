@@ -41,6 +41,33 @@
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
 
+  var ngbPackageNames = [
+    'accordion',
+    'alert',
+    'bundles',
+    'buttons',
+    'carousel',
+    'collapse',
+    'dropdown',
+    'esm',
+    'modal',
+    'pagination',
+    'popover',
+    'progressbar',
+    'rating',
+    'tabset',
+    'timepicker',
+    'tooltip',
+    'typeahead',
+    'util'
+  ];
+
+  function ngbPackIndex(pkgName) {
+    packages['@ng-bootstrap/ng-bootstrap/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  }
+
+  ngbPackageNames.forEach(ngbPackIndex);
+
   var config = {
     map: map,
     packages: packages

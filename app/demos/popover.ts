@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NGB_POPOVER_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
     selector: 'popover-demo',
-    templateUrl: 'dist/demos/popover.html',
-    directives: [NGB_POPOVER_DIRECTIVES]
+    templateUrl: 'dist/demos/popover.html'
 })
 export class PopoverDemo implements OnInit {
 

@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NGB_ALERT_DIRECTIVES } from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
     selector: 'alert-demo',
     templateUrl: 'dist/demos/alert.html',
-    directives: [ NGB_ALERT_DIRECTIVES ],
     styleUrls: ['dist/demos/alert.css']
 })
 export class AlertDemo implements OnInit {
