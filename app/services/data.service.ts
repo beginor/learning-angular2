@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Data } from '../models/models';
+
 @Injectable()
 export class DataService {
 
@@ -10,7 +12,7 @@ export class DataService {
     private loadCount = 0;
 
     getData() {
-        var data = {
+        var data: Data = {
             startAt: new Date().getTime() / 1000,
             databases: {}
         };
@@ -31,12 +33,12 @@ export class DataService {
             var r = Math.floor((Math.random() * 10) + 1);
             for (var i = 0; i < r; i++) {
                 var q = {
-                    canvasAction: null,
-                    canvasContextId: null,
-                    canvasController: null,
-                    canvasHostname: null,
-                    canvasJobTag: null,
-                    canvasPid: null,
+                    canvasAction: '',
+                    canvasContextId: 0,
+                    canvasController: '',
+                    canvasHostname: '',
+                    canvasJobTag: '',
+                    canvasPid: 0,
                     elapsed: Math.random() * 15,
                     query: 'SELECT blah FROM something',
                     waiting: Math.random() < 0.5
@@ -53,7 +55,7 @@ export class DataService {
                 info.queries.push(q);
             }
 
-            info.queries = info.queries.sort((a, b) => b.elapsed - a.elapsed);
+            info.queries = info.queries.sort((a: any, b: any) => b.elapsed - a.elapsed);
         });
 
         return data;

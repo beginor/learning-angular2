@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { DataService } from '../services/data.service';
+import { Data, Database, Query } from '../models/models';
 
 @Component({
     selector: 'home',
@@ -71,14 +72,14 @@ export class Home {
     }
 
     getDatabases() {
-        var dbs = [];
+        var dbs: any[] = [];
         Object.keys(this.databases).forEach(dbname => {
             dbs.push(this.databases[dbname]);
         });
         return dbs;
     }
 
-    getClassName(query) {
+    getClassName(query: Query) {
         var className = "elapsed short";
         if (query.elapsed >= 10.0) {
             className = "elapsed warn_long";
@@ -88,7 +89,7 @@ export class Home {
         return "Query " + className;
     }
 
-    formatElapsed(value) {
+    formatElapsed(value: any) {
         if(!value) {
             return '';
         }
