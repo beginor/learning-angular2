@@ -11,9 +11,12 @@ import { Home } from './demos/home';
 import { AccordionDemo } from './demos/accordion';
 import { AlertDemo } from './demos/alert';
 
+import { DataService } from './services/data.service';
+
 @NgModule({
     declarations: [AppComponent, Home, AccordionDemo, AlertDemo],
     imports:      [BrowserModule, NgbModule, FormsModule, AppRoutes],
+    providers: [DataService],
     bootstrap:    [AppComponent]
 })
 export class AppModule {}
