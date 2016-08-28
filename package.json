@@ -46,11 +46,13 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "0.5.0",
+    "@angular/platform-server": "2.0.0-rc.5",
     "concurrently": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-live-server": "0.0.29",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.13.3",
-    "typescript": "^1.8.10"
+    "typescript": "^1.9.0-dev.20160627-1.0"
   }
 }
