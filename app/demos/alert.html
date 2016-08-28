@@ -3,12 +3,11 @@
         Alert
     </div>
     <div class="card-block">
-        <ngb-alert *ngFor="let alert of alerts" [type]="alert.type" [dismissible]="true" (close)="closeAlert(alert.id)">
-            {{alert.message}}
-        </ngb-alert>
-
+        <p *ngFor="let alert of alerts">
+            <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>
         <p>
-            <button type="button" class="btn btn-sm btn-secondary" (click)="reset()">Reset</button>
+            <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
         </p>
     </div>
 </div>
@@ -17,13 +16,13 @@
     <div class="card-header">Self-Closing Alert</div>
     <div class="card-block">
         <p>
-            These alerts will be dismissed in 5 seconds.  Click "Add Alert" to add an alert.
+            These alerts will be dismissed in 5 seconds. Click "Add Alert" to add an alert.
         </p>
-        <p *ngFor="let alt of autoCloseAlerts">
-            <template ngbAlert [dismissOnTimeout]="5000" >{{alt}}</template>
+        <p *ngFor="let alert of autoCloseAlerts">
+            <template ngbAlert [dismissOnTimeout]="5000">{{ alert }}</template>
         </p>
         <p>
-            <button type="button" class="btn btn-sm btn-secondary" (click)="addAlert()">Add</button>
+            <button class="btn btn-primary" (click)="addAlert()">Add Alert</button>
         </p>
     </div>
 </div>
@@ -31,8 +30,8 @@
 <div class="card">
     <div class="card-header">Custom Alert</div>
     <div class="card-block">
-        <ngb-alert type="custom" [dismissable]="false">
-            <strong>Whoa!</strong> This is a custom alert.
-        </ngb-alert>
+        <p>
+            <ngb-alert type="custom" [dismissible]="false"><strong>Whoa!</strong> This is a custom alert.</ngb-alert>
+        </p>
     </div>
 </div>
