@@ -9,6 +9,7 @@ import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
 import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
+import { ProgressbarDemo } from "./demos/progressbar";
 
 export interface TextRoute extends Route {
     text: string;
@@ -23,7 +24,8 @@ export const routes: TextRoute[] = [
     { path: 'collapse', component: CollapseDemo, text: 'Collapse' },
     { path: 'dropdown', component: DropdownDemo, text: 'Dropdown' },
     { path: 'pagination', component: PaginationDemo, text: 'Pagination' },
-    { path: 'popover', component: PopoverDemo, text: 'Popover' }
+    { path: 'popover', component: PopoverDemo, text: 'Popover' },
+    { path: 'progressbar', component: ProgressbarDemo, text: 'Progressbar' }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes, { useHash: true });

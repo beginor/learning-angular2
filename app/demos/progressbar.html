@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">Progressbar</div>
+
+    <div class="card-block">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" [(ngModel)]="animated" />
+                Animated
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" [(ngModel)]="striped" />
+                Striped
+            </label>
+        </div>
+        <input type="range" min="0" max="100" [(ngModel)]="value" />
+
+        <hr />
+
+        <ngb-progressbar type="success" [animated]="animated" [striped]="striped" [value]="value"></ngb-progressbar>
+        <ngb-progressbar type="info" [animated]="animated" [striped]="striped" [value]="value"></ngb-progressbar>
+        <ngb-progressbar type="warning" [animated]="animated" [striped]="striped" [value]="value"></ngb-progressbar>
+        <ngb-progressbar type="danger" [animated]="animated" [striped]="striped" [value]="value"></ngb-progressbar>
+    </div>
+</div>

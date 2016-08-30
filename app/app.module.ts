@@ -15,10 +15,28 @@ import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
 import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
+import { ProgressbarDemo } from './demos/progressbar';
 
 @NgModule({
-    declarations: [AppComponent, Home, AccordionDemo, AlertDemo, ButtonsDemo, CarouselDemo, CollapseDemo, DropdownDemo, PaginationDemo, PopoverDemo],
-    imports:      [BrowserModule, NgbModule, FormsModule, AppRoutes],
-    bootstrap:    [AppComponent]
+    declarations: [
+        AppComponent,
+        Home,
+        AccordionDemo,
+        AlertDemo,
+        ButtonsDemo,
+        CarouselDemo,
+        CollapseDemo,
+        DropdownDemo,
+        PaginationDemo,
+        PopoverDemo,
+        ProgressbarDemo
+    ],
+    imports: [
+        BrowserModule,
+        NgbModule,
+        FormsModule,
+        AppRoutes
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
