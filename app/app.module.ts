@@ -16,6 +16,7 @@ import { DropdownDemo } from './demos/dropdown';
 import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from './demos/progressbar';
+import { RatingDemo } from './demos/rating';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { ProgressbarDemo } from './demos/progressbar';
         DropdownDemo,
         PaginationDemo,
         PopoverDemo,
-        ProgressbarDemo
+        ProgressbarDemo,
+        RatingDemo
     ],
     imports: [
         BrowserModule,
