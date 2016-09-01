@@ -7,6 +7,10 @@ import { AppModule } from './app.module';
 
 enableProdMode();
 
-platformBrowserDynamic().bootstrapModule(AppModule).catch(err => {
-    console.error(err);
-});
+platformBrowserDynamic().bootstrapModule(AppModule)
+    .then(val => {
+        console.log('app bootstrap');
+    })
+    .catch(err => {
+        console.error(err);
+    });
