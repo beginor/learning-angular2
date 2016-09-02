@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-header">Tabs</div>
+    <div class="card-block">
+        
+        <label class="form-check-inline" *ngFor="let t of types">
+            <input type="radio" [(ngModel)]="type" [value]="t" /> {{t}}
+        </label>
+
+        <p>
+            <button class="btn btn-outline-primary" (click)="toggleSelected()">Toogle selected tab</button>
+        </p>
+
+        <hr />
+
+        <ngb-tabset [type]="type" [activeId]="tab" (change)="beforeChange($event)">
+            <ngb-tab id="tab1" title="Tab 1">
+                <template ngbTabContent>
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum 
+                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </template>
+            </ngb-tab>
+            <ngb-tab id="tab2">
+                <template ngbTabTitle><b>Tab</b> 2</template>
+                <template ngbTabContent>
+                    <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+                    yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
+                    shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+                    sint qui sapiente accusamus tattooed echo park.</p>
+                </template>
+            </ngb-tab>
+            <ngb-tab id="tab3" title="Tab 3 Disabled" [disabled]="true">
+                <template ngbTabContent>
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum 
+                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </template>
+            </ngb-tab>
+            <ngb-tab id="tab4" title="Tab 4">
+                <template ngbTabContent>
+                    <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+                    cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+                    yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
+                    shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+                    sint qui sapiente accusamus tattooed echo park.</p>
+                </template>
+            </ngb-tab>
+            <ngb-tab id="tab5" title="Tab 5 can not be selected">
+                <template ngbTabContent>
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum 
+                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>

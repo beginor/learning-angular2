@@ -17,6 +17,7 @@ import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from './demos/progressbar';
 import { RatingDemo } from './demos/rating';
+import { TabsDemo } from './demos/tabs';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { RatingDemo } from './demos/rating';
         PaginationDemo,
         PopoverDemo,
         ProgressbarDemo,
-        RatingDemo
+        RatingDemo,
+        TabsDemo
     ],
     imports: [
         BrowserModule,

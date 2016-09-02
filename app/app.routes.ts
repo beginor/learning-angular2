@@ -11,6 +11,7 @@ import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from "./demos/progressbar";
 import { RatingDemo } from './demos/rating';
+import { TabsDemo } from './demos/tabs';
 
 export interface TextRoute extends Route {
     text: string;
@@ -27,7 +28,8 @@ export const routes: TextRoute[] = [
     { path: 'pagination', component: PaginationDemo, text: 'Pagination' },
     { path: 'popover', component: PopoverDemo, text: 'Popover' },
     { path: 'progressbar', component: ProgressbarDemo, text: 'Progressbar' },
-    { path: 'rating', component: RatingDemo, text: 'Rating' }
+    { path: 'rating', component: RatingDemo, text: 'Rating' },
+    { path: 'tabs', component: TabsDemo, text: 'Tabs' }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes, { useHash: true });
