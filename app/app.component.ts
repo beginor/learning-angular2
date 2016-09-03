@@ -1,19 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
-import { provideRouter, ROUTER_DIRECTIVES } from '@angular/router';
 
 import { routes } from './app.routes';
 
 @Component({
     //moduleId: module.id,
     selector: 'app',
-    providers: [ HTTP_PROVIDERS ],
     templateUrl: 'dist/app.component.html',
-    styleUrls: ['dist/app.component.css'],
-    directives: [
-        ROUTER_DIRECTIVES
-    ],
-    pipes: []
+    styleUrls: ['dist/app.component.css']
 })
 export class AppComponent implements OnInit {
 
