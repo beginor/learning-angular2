@@ -36,7 +36,7 @@
     "@angular/platform-browser": "2.0.0-rc.6",
     "@angular/platform-browser-dynamic": "2.0.0-rc.6",
     "@angular/router": "3.0.0-rc.2",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.2",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.3",
     "bootstrap": "^4.0.0-alpha.3",
     "core-js": "^2.4.1",
     "font-awesome": "^4.6.3",
