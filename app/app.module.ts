@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -19,6 +20,7 @@ import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from './demos/progressbar';
 import { RatingDemo } from './demos/rating';
 import { TabsDemo } from './demos/tabs';
+import { TimepickerDemo } from './demos/timepicker';
 
 @NgModule({
     declarations: [
@@ -34,13 +36,15 @@ import { TabsDemo } from './demos/tabs';
         PopoverDemo,
         ProgressbarDemo,
         RatingDemo,
-        TabsDemo
+        TabsDemo,
+        TimepickerDemo
     ],
     imports: [
         BrowserModule,
-        NgbModule,
+        CommonModule,
         FormsModule,
         RouterModule,
+        NgbModule,
         AppRoutes
     ],
     bootstrap: [AppComponent]

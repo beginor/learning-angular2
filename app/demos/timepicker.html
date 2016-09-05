@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header">Timepicker</div>
+    <div class="card-block">
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary" [class.active]="disabled">
+                <input type="checkbox" [(ngModel)]="disabled" /> Disabled
+            </label>
+            <label class="btn btn-primary" [class.active]="meridian">
+                <input type="checkbox" [(ngModel)]="meridian" /> Show Meridian
+            </label>
+            <label class="btn btn-primary" [class.active]="readonlyInputs">
+                <input type="checkbox" [(ngModel)]="readonlyInputs" /> Read Only
+            </label>
+            <label class="btn btn-primary" [class.active]="seconds">
+                <input type="checkbox" [(ngModel)]="seconds" /> Show Seconds
+            </label>
+            <label class="btn btn-primary" [class.active]="spinners">
+                <input type="checkbox" [(ngModel)]="spinners" /> Show Spinners
+            </label>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3">
+                <label for="hourStep">Hour step</label>
+                <input id="hourStep" type="number" [(ngModel)]="hourStep" step="1" min="1" max="4" />
+            </div>
+            <div class="col-xs-3">
+                <label for="minuteStep">Minute step</label>
+                <input id="minuteStep" type="number" [(ngModel)]="minuteStep" step="5" min="1" max="30" />
+            </div>
+            <div class="col-xs-3">
+                <label for="secondStep">Second step</label>
+                <input id="secondStep" type="number" [(ngModel)]="secondStep" step="10" min="10" max="30" />
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="form-group" [class.has-success]="ctrl.valid" [class.has-danger]="!ctrl.valid">
+            <ngb-timepicker [(ngModel)]="time" [seconds]="seconds"
+                            [meridian]="meridian" [disabled]="disabled"
+                            [readonlyInputs]="readonlyInputs" [spinners]="spinners"
+                            [hourStep]="hourStep" [minuteStep]="minuteStep"
+                            [secondStep]="secondStep"
+                            required
+                            ></ngb-timepicker>
+            <div class="form-control-feedback">
+                <div *ngIf="ctrl.valid">Great choice</div>
+                <div *ngIf="ctrl.errors?.required">Select some time during lunchtime</div>
+                <div *ngIf="ctrl.errors?.tooLate">Oh no, it's way too late</div>
+                <div *ngIf="ctrl.errors?.tooEarly">It's a bit too early</div>
+            </div>
+        </div>
+
+        <hr />
+
+        time: {{time | json }}
+    </div>
+</div>
