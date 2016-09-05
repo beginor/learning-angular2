@@ -21,6 +21,7 @@ import { ProgressbarDemo } from './demos/progressbar';
 import { RatingDemo } from './demos/rating';
 import { TabsDemo } from './demos/tabs';
 import { TimepickerDemo } from './demos/timepicker';
+import { TooltipDemo } from './demos/tooltip';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import { TimepickerDemo } from './demos/timepicker';
         ProgressbarDemo,
         RatingDemo,
         TabsDemo,
-        TimepickerDemo
+        TimepickerDemo,
+        TooltipDemo
     ],
     imports: [
         BrowserModule,
