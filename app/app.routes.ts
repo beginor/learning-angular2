@@ -14,6 +14,7 @@ import { RatingDemo } from './demos/rating';
 import { TabsDemo } from './demos/tabs';
 import { TimepickerDemo } from './demos/timepicker';
 import { TooltipDemo } from './demos/tooltip';
+import { TypeaheadDemo } from './demos/typeahead';
 
 export interface TextRoute extends Route {
     text: string;
@@ -33,7 +34,8 @@ export const routes: TextRoute[] = [
     { path: 'rating', component: RatingDemo, text: 'Rating' },
     { path: 'tabs', component: TabsDemo, text: 'Tabs' },
     { path: 'timepicker', component: TimepickerDemo, text: 'Timepicker' },
-    { path: 'tooltip', component: TooltipDemo, text: 'Tooltip' }
+    { path: 'tooltip', component: TooltipDemo, text: 'Tooltip' },
+    { path: 'typeahead', component: TypeaheadDemo, text: 'Typeahead' }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes, { useHash: true });
