@@ -16,6 +16,7 @@ import { ButtonsDemo } from './demos/buttons';
 import { CarouselDemo } from './demos/carousel';
 import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
+import { ModalDemo } from './demos/modal';
 import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from './demos/progressbar';
@@ -35,6 +36,7 @@ import { TypeaheadDemo } from './demos/typeahead';
         CarouselDemo,
         CollapseDemo,
         DropdownDemo,
+        ModalDemo,
         PaginationDemo,
         PopoverDemo,
         ProgressbarDemo,

@@ -7,6 +7,7 @@ import { ButtonsDemo } from './demos/buttons';
 import { CarouselDemo } from './demos/carousel';
 import { CollapseDemo } from './demos/collapse';
 import { DropdownDemo } from './demos/dropdown';
+import { ModalDemo } from './demos/modal';
 import { PaginationDemo } from './demos/pagination';
 import { PopoverDemo } from './demos/popover';
 import { ProgressbarDemo } from "./demos/progressbar";
@@ -28,6 +29,7 @@ export const routes: TextRoute[] = [
     { path: 'carousel', component: CarouselDemo, text: 'Carousel' },
     { path: 'collapse', component: CollapseDemo, text: 'Collapse' },
     { path: 'dropdown', component: DropdownDemo, text: 'Dropdown' },
+    { path: 'modal', component: ModalDemo, text: 'Modal' },
     { path: 'pagination', component: PaginationDemo, text: 'Pagination' },
     { path: 'popover', component: PopoverDemo, text: 'Popover' },
     { path: 'progressbar', component: ProgressbarDemo, text: 'Progressbar' },
