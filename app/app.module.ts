@@ -26,6 +26,8 @@ import { TimepickerDemo } from './demos/ngb/timepicker';
 import { TooltipDemo } from './demos/ngb/tooltip';
 import { TypeaheadDemo } from './demos/ngb/typeahead';
 
+import { PerformanceDemo } from './demos/performance/performance';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -44,7 +46,8 @@ import { TypeaheadDemo } from './demos/ngb/typeahead';
         TabsDemo,
         TimepickerDemo,
         TooltipDemo,
-        TypeaheadDemo
+        TypeaheadDemo,
+        PerformanceDemo
     ],
     imports: [
         BrowserModule,

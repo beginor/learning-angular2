@@ -16,28 +16,26 @@ import { TabsDemo } from './demos/ngb/tabs';
 import { TimepickerDemo } from './demos/ngb/timepicker';
 import { TooltipDemo } from './demos/ngb/tooltip';
 import { TypeaheadDemo } from './demos/ngb/typeahead';
+import { PerformanceDemo } from './demos/performance/performance';
 
-export interface TextRoute extends Route {
-    text: string;
-}
-
-export const routes: TextRoute[] = [
-    { path: '', component: Home, text: 'Home' },
-    { path: 'accordion', component: AccordionDemo, text: 'Accordion' },
-    { path: 'alert', component: AlertDemo, text: 'Alert' },
-    { path: 'buttons', component: ButtonsDemo, text: 'Buttons' },
-    { path: 'carousel', component: CarouselDemo, text: 'Carousel' },
-    { path: 'collapse', component: CollapseDemo, text: 'Collapse' },
-    { path: 'dropdown', component: DropdownDemo, text: 'Dropdown' },
-    { path: 'modal', component: ModalDemo, text: 'Modal' },
-    { path: 'pagination', component: PaginationDemo, text: 'Pagination' },
-    { path: 'popover', component: PopoverDemo, text: 'Popover' },
-    { path: 'progressbar', component: ProgressbarDemo, text: 'Progressbar' },
-    { path: 'rating', component: RatingDemo, text: 'Rating' },
-    { path: 'tabs', component: TabsDemo, text: 'Tabs' },
-    { path: 'timepicker', component: TimepickerDemo, text: 'Timepicker' },
-    { path: 'tooltip', component: TooltipDemo, text: 'Tooltip' },
-    { path: 'typeahead', component: TypeaheadDemo, text: 'Typeahead' }
+const routes: Route[] = [
+    { path: '', component: Home },
+    { path: 'accordion', component: AccordionDemo },
+    { path: 'alert', component: AlertDemo },
+    { path: 'buttons', component: ButtonsDemo },
+    { path: 'carousel', component: CarouselDemo },
+    { path: 'collapse', component: CollapseDemo },
+    { path: 'dropdown', component: DropdownDemo },
+    { path: 'modal', component: ModalDemo },
+    { path: 'pagination', component: PaginationDemo },
+    { path: 'popover', component: PopoverDemo },
+    { path: 'progressbar', component: ProgressbarDemo },
+    { path: 'rating', component: RatingDemo },
+    { path: 'tabs', component: TabsDemo },
+    { path: 'timepicker', component: TimepickerDemo },
+    { path: 'tooltip', component: TooltipDemo },
+    { path: 'typeahead', component: TypeaheadDemo },
+    { path: 'performance', component: PerformanceDemo }
 ];
 
-export const AppRoutes = RouterModule.forRoot(routes, { useHash: true });
+export const AppRoutes = RouterModule.forRoot(routes, { useHash: false });
