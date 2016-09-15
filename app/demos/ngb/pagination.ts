@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'pagination-demo',
-    templateUrl: 'dist/demos/pagination.html'
+    templateUrl: 'dist/demos/ngb/pagination.html'
 })
 export class PaginationDemo {
 

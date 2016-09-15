@@ -10,21 +10,21 @@ import { AppComponent }   from './app.component';
 import { AppRoutes } from './app.routes';
 
 import { Home } from './demos/home';
-import { AccordionDemo } from './demos/accordion';
-import { AlertDemo } from './demos/alert';
-import { ButtonsDemo } from './demos/buttons';
-import { CarouselDemo } from './demos/carousel';
-import { CollapseDemo } from './demos/collapse';
-import { DropdownDemo } from './demos/dropdown';
-import { ModalDemo } from './demos/modal';
-import { PaginationDemo } from './demos/pagination';
-import { PopoverDemo } from './demos/popover';
-import { ProgressbarDemo } from './demos/progressbar';
-import { RatingDemo } from './demos/rating';
-import { TabsDemo } from './demos/tabs';
-import { TimepickerDemo } from './demos/timepicker';
-import { TooltipDemo } from './demos/tooltip';
-import { TypeaheadDemo } from './demos/typeahead';
+import { AccordionDemo } from './demos/ngb/accordion';
+import { AlertDemo } from './demos/ngb/alert';
+import { ButtonsDemo } from './demos/ngb/buttons';
+import { CarouselDemo } from './demos/ngb/carousel';
+import { CollapseDemo } from './demos/ngb/collapse';
+import { DropdownDemo } from './demos/ngb/dropdown';
+import { ModalDemo } from './demos/ngb/modal';
+import { PaginationDemo } from './demos/ngb/pagination';
+import { PopoverDemo } from './demos/ngb/popover';
+import { ProgressbarDemo } from './demos/ngb/progressbar';
+import { RatingDemo } from './demos/ngb/rating';
+import { TabsDemo } from './demos/ngb/tabs';
+import { TimepickerDemo } from './demos/ngb/timepicker';
+import { TooltipDemo } from './demos/ngb/tooltip';
+import { TypeaheadDemo } from './demos/ngb/typeahead';
 
 @NgModule({
     declarations: [

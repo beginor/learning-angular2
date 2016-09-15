@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { routes } from './app.routes';
+import { Component } from '@angular/core';
 
 @Component({
     //moduleId: module.id,
@@ -8,12 +6,6 @@ import { routes } from './app.routes';
     templateUrl: 'dist/app.component.html',
     styleUrls: ['dist/app.component.css']
 })
-export class AppComponent implements OnInit {
-
-    demos: any;
-
-    ngOnInit() {
-        this.demos = routes;
-    }
+export class AppComponent {
 
 }

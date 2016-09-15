@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'popover-demo',
-    templateUrl: 'dist/demos/popover.html'
+    templateUrl: 'dist/demos/ngb/popover.html'
 })
 export class PopoverDemo implements OnInit {
 

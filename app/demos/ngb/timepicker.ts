@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'timepicker-demo',
-    templateUrl: 'dist/demos/timepicker.html'
+    templateUrl: 'dist/demos/ngb/timepicker.html'
 })
 export class TimepickerDemo implements OnInit {
 

@@ -1,15 +1,5 @@
-<div class="container-fluid">
-    <div class="col-md-3 col-sm-4">
-        <div class="card">
-            <div class="card-header">ng-bootstrap Demos</div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item" *ngFor="let demo of demos" [routerLink]="[demo.path]">{{demo.text}}</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-9 col-sm-8">
-        <div class="demo-content">
-            <router-outlet></router-outlet>
-        </div>
+<div class="container">
+    <div class="demo-content">
+        <router-outlet></router-outlet>
     </div>
 </div>

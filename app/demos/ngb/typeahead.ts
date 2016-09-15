@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { } from '@angular/http';
-import { states, statesWithFlags, WikipediaService } from '../services/state.service';
+import { states, statesWithFlags, WikipediaService } from '../../services/state.service';
 
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/debounceTime';
@@ -9,7 +9,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: 'dist/demos/typeahead.html',
+    templateUrl: 'dist/demos/ngb/typeahead.html',
     selector: 'typeahead-demo',
     styles: [`.form-control { width: 300px; }`],
     providers: [WikipediaService]
