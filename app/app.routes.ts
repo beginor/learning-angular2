@@ -1,4 +1,4 @@
-import { Route, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { Home } from './demos/home';
 import { AccordionDemo } from './demos/ngb/accordion';
@@ -18,7 +18,7 @@ import { TooltipDemo } from './demos/ngb/tooltip';
 import { TypeaheadDemo } from './demos/ngb/typeahead';
 import { PerformanceDemo } from './demos/performance/performance';
 
-const routes: Route[] = [
+const routes: Routes = [
     { path: '', component: Home },
     { path: 'accordion', component: AccordionDemo },
     { path: 'alert', component: AlertDemo },
@@ -38,4 +38,4 @@ const routes: Route[] = [
     { path: 'performance', component: PerformanceDemo }
 ];
 
-export const AppRoutes = RouterModule.forRoot(routes, { useHash: false });
+export const AppRoutes = RouterModule.forRoot(routes, { useHash: true, enableTracing: true });
