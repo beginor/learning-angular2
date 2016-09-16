@@ -6,8 +6,8 @@ let gulp = require('gulp'),
     tsc = require('gulp-typescript');
 
 let root = './',
-    ts = root + 'app/**/*.ts',
-    html = root + 'app/**/*.html',
+    ts = root + 'src/**/*.ts',
+    html = root + 'src/**/*.html',
     dist = root + 'dist',
     port = 3000;
 
