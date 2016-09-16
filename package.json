@@ -6,9 +6,9 @@
   "scripts": {
     "postinstall": "npm run typings-install",
     "typings-install": "typings install",
-    "dev": "concurrently \"compass watch\" \"gulp dev\"",
+    "dev": "gulp dev",
     "prebuild": "rm -rf dist",
-    "build": "compass compile && gulp build",
+    "build": "gulp build",
     "start": "npm run dev",
     "prestart": "npm run build",
     "clean": "rm -rf node_modules typings dist"
@@ -48,9 +48,10 @@
   "devDependencies": {
     "@angular/compiler-cli": "0.6.1",
     "@angular/platform-server": "2.0.0",
-    "concurrently": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-live-server": "0.0.29",
+    "gulp-api-proxy": "^1.0.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.13.3",
     "typescript": "^2.0.2"
