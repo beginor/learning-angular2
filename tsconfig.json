@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "amd",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "outDir": "dist"
+    "suppressImplicitAnyIndexErrors": false
   },
   "exclude": [
     "node_modules",
-    ".idea"
+    ".idea",
+    ".vscode"
   ]
 }
