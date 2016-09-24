@@ -38,4 +38,4 @@ const routes: Routes = [
     { path: 'performance', component: PerformanceDemo }
 ];
 
-export const AppRoutes = RouterModule.forRoot(routes, { useHash: true, enableTracing: true });
+export const AppRoutes = RouterModule.forRoot(routes, { useHash: true, enableTracing: false });
