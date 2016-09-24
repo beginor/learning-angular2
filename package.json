@@ -4,14 +4,9 @@
   "description": "learning angular2",
   "main": "index.html",
   "scripts": {
-    "postinstall": "npm run typings-install",
-    "typings-install": "typings install",
-    "prebuild": "rm -rf dist",
-    "build": "compass compile && webpack --progress --display-error-details --display-cached",
-    "watch": "concurrently \"compass watch\" \"webpack --progress --display-error-details --display-cached --watch\"",
-    "dev": "concurrently \"compass watch\" \"webpack-dev-server --inline --colors --progress --hot\"",
-    "start": "npm run dev",
-    "clean": "rm -rf node_modules typings dist"
+    "postinstall": "typings install",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "start": "webpack-dev-server --inline --hot --progress --port 3000 --host 0.0.0.0"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'buttons-demo',
-    templateUrl: 'dist/demos/ngb/buttons.html'
+    templateUrl: './buttons.html'
 })
 export class ButtonsDemo implements OnInit {
 

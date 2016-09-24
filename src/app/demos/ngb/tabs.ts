@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbTabChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    templateUrl: 'dist/demos/ngb/tabs.html',
+    templateUrl: './tabs.html',
     selector: 'tabs-demo'
 })
 export class TabsDemo implements OnInit {

@@ -5,7 +5,7 @@ import { Data, Database, Query } from '../../models/models';
 
 @Component({
     selector: 'home',
-    templateUrl: 'dist/demos/performance/performance.html',
+    templateUrl: '/performance.html',
     styles:[`
         .Query {
             position: relative;

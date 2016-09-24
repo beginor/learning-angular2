@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'progress-demo',
-    templateUrl: 'dist/demos/ngb/progressbar.html'
+    templateUrl: './progressbar.html'
 })
 export class ProgressbarDemo implements OnInit{
 

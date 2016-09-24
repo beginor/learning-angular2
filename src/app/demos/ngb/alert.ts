@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'alert-demo',
-    templateUrl: 'dist/demos/ngb/alert.html',
-    styleUrls: ['dist/demos/ngb/alert.css']
+    templateUrl: './alert.html',
+    styleUrls: ['./alert.scss']
 })
 export class AlertDemo implements OnInit {
     

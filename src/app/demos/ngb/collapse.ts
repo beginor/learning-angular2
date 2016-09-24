@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'collapse-demo',
-    templateUrl: 'dist/demos/ngb/collapse.html'
+    templateUrl: './collapse.html'
 })
 export class CollapseDemo {
 

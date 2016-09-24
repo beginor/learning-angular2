@@ -4,7 +4,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'modal-demo',
-    templateUrl: 'dist/demos/ngb/modal.html'
+    templateUrl: './modal.html'
 })
 export class ModalDemo {
 

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'dropdown-demo',
-    templateUrl: 'dist/demos/ngb/dropdown.html'
+    templateUrl: './dropdown.html'
 })
 export class DropdownDemo {
 

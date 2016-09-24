@@ -9,7 +9,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: 'dist/demos/ngb/typeahead.html',
+    templateUrl: './typeahead.html',
     selector: 'typeahead-demo',
     styles: [`.form-control { width: 300px; }`],
     providers: [WikipediaService]
