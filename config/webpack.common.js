@@ -1,30 +1,58 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
-    cache: true,
-    debug: true,
-    output: {
-        filename: '[name].bundle.js',
-        sourceMapFilename: '[name].bundle.js.map',
-        chunkFilename: '[id].chunk.js'
-    },
-    resolve: {
-        root: [helpers.root('app')],
-        extensions: ['', '.ts', '.js']
-    },
-    devServer: {
-        historyApiFallback: true,
-        watchOptions: { aggregateTimeout: 300, poll: 1000 }
-    },
+  entry: {
+    'polyfills': './src/polyfills.ts',
+    'vendor': './src/vendor.ts',
+    'app': './src/main.ts'
+  },
 
-    node: {
-        global: 1,
-        crypto: 'empty',
-        module: 0,
-        Buffer: 0,
-        clearImmediate: 0,
-        setImmediate: 0
-    }
+  resolve: {
+    extensions: ['', '.js', '.ts']
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.ts$/,
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+      },
+      {
+        test: /\.html$/,
+        loader: 'html'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)\??.*$/,
+        loader: 'file?name=assets/[name].[ext]'
+      },
+      {
+        test: /\.css$/,
+        exclude: helpers.root('src', 'app'),
+        loader: ExtractTextPlugin.extract('style', ['css?sourceMap'])
+      },
+      {
+        test: /\.scss$/,
+        exclude: helpers.root('src', 'app'),
+        loader: ExtractTextPlugin.extract('style', ['css?sourceMap', 'sass?sourceMap'])
+      },
+      {
+        test: /\.scss$/,
+        include: helpers.root('src', 'app'),
+        loaders: ['raw', 'sass?sourceMap']
+      }
+    ]
+  },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['app', 'vendor', 'polyfills']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ]
 };
