@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">Radio Buttons</div>
+    <div class="card-block">
+        <div ngbRadioGroup [(ngModel)]="radioValue">
+            <label class="btn btn-primary">
+                <input type="radio" [value]="1" /> Left 
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="middle" /> Middle 
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" [value]="false" /> Right 
+            </label>
+        </div>
+        <hr />
+        radioValue is: {{radioValue}}
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">CheckBox List</div>
+    <div class="card-block">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary" [class.active]="checkValues.left" >
+                <input type="checkbox" [(ngModel)]="checkValues.left" /> Left
+            </label>
+            <label class="btn btn-primary" [class.active]="checkValues.middle" >
+                <input type="checkbox" [(ngModel)]="checkValues.middle" /> Middle
+            </label>
+            <label class="btn btn-primary" [class.active]="checkValues.right" >
+                <input type="checkbox" [(ngModel)]="checkValues.right" /> Right
+            </label>
+        </div>
+        <hr />
+        checkValues is: {{checkValues|json}}
+    </div>
+</div>
